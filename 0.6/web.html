@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="sl-SI">
+<head>
+	<link rel="apple-touch-icon" sizes="57x57" href="Favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="Favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="Favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="Favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="Favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="Favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="Favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="Favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+	<link rel="manifest" href="Favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="Favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta charset="UTF-8">
+	<link href="./style.css" type="text/css" rel="stylesheet">
+	<title>Nemški Nepravilni Glagoli</title>
+</head>
+<body onload="onLoad()">
+
+<!--  -->
+
+<nav>
+	<a href="zasluge.html">Zasluge</a>
+	<a href="sichGlagoli.html">Sich Glagoli</a>
+</nav>
+
+<p id="pomoc">Pomoč?<span>
+	<strong>Nasveti:</strong><br>
+	- če hočeš glagol vpisati, klikni VPIŠI GLAGOLSKO OBLIKO<br>
+	- če hočeš imeti glagol podan, klikni POKAŽI GLAGOLSKO OBLIKO<br>
+	- če nočeš imeti opravka s stolcem, klikni PRESKOČI<br>
+	- za hiter preimik med vpisnimi okni klikni CTRL<br>
+	- namesto gumba preveri/nadaljuj lahko uporabiš ENTER<br>
+	<br>
+	<strong>Nemške črke: </strong><br>
+	ä = Alt + a <br>
+	ö = Alt + o <br>
+	ü = Alt + u <br>
+	ß = Alt + s <br>
+</span></p>
+
+<div class="naSredini"> <!-- vse je na sredini -->
+
+<h1 class="naslov">Nemški nepravlni glagoli</h1>
+
+<table id="tabela", class="tabela">
+
+  <tr> <!-- vsi gumbi -->
+	<td>
+		<div class="vsiGumbi">
+			<label><input type="radio" name="sloPrevod" id="preskoci0" checked><span>Preskoči</span></label>
+			<label><input type="radio" name="sloPrevod" id="pokaziGlagolskoObliko0"><span>Pokaži Glagolsko Obliko</span></label>
+			<label><input type="radio" name="sloPrevod" id="vpisiGlagolskoObliko0"><span>Vpiši Glagolsko Obliko</span></label>
+		</div>
+	</td>
+	<td>
+		<div class="vsiGumbi">
+			<label><input type="radio" name="Infinitiv" id="preskoci1" checked><span>Preskoči</span></label>
+			<label><input type="radio" name="Infinitiv" id="pokaziGlagolskoObliko1"><span>Pokaži Glagolsko Obliko</span></label>
+			<label><input type="radio" name="Infinitiv" id="vpisiGlagolskoObliko1"><span>Vpiši Glagolsko Obliko</span></label>
+	</td>
+	<td>
+		<div class="vsiGumbi">
+			<label><input type="radio" name="drittePerson" id="preskoci2" checked><span>Preskoči</span></label>
+			<label><input type="radio" name="drittePerson" id="pokaziGlagolskoObliko2"><span>Pokaži Glagolsko Obliko</span></label>
+			<label><input type="radio" name="drittePerson" id="vpisiGlagolskoObliko2"><span>Vpiši Glagolsko Obliko</span></label>
+		</div>
+	</td>
+	<td>
+		<div class="vsiGumbi">
+			<label><input type="radio" name="Präteritum" id="preskoci3" checked><span>Preskoči</span></label>
+			<label><input type="radio" name="Präteritum" id="pokaziGlagolskoObliko3"><span>Pokaži Glagolsko Obliko</span></label>
+			<label><input type="radio" name="Präteritum" id="vpisiGlagolskoObliko3"><span>Vpiši Glagolsko Obliko</span></label>
+		</div>
+	</td>
+	<td>
+		<div class="vsiGumbi">
+			<label><input type="radio" name="Perfekt" id="preskoci4" checked><span>Preskoči</span></label>
+			<label><input type="radio" name="Perfekt" id="pokaziGlagolskoObliko4"><span>Pokaži Glagolsko Obliko</span></label>
+			<label><input type="radio" name="Perfekt" id="vpisiGlagolskoObliko4"><span>Vpiši Glagolsko Obliko</span></label>
+		</div>
+	</td>
+  </tr>
+
+  <tr class="nasloviStolpcev"> <!-- vsi naslovi -->
+	<th>Slovenski Prevod</th>
+	<th>Infinitiv</th> 
+	<th>3. Person</th>
+	<th>Präteritum</th>
+	<th>Perfekt</th>
+  </tr>
+
+  <tr> <!-- pravilnost -->
+	<td id="pravilnost0"></td>
+	<td id="pravilnost1"></td>
+	<td id="pravilnost2"></td>
+	<td id="pravilnost3"></td>
+	<td id="pravilnost4"></td>
+  </tr>
+
+  <tr> <!-- celice -->
+    <td id="sloPrevod"></td>
+    <td id="Infinitiv"></td> 
+	<td id="drittePerson"></td>
+	<td id="Präteritum"></td>
+	<td id="Perfekt"></td>
+  </tr>
+
+  <tr> <!-- procenti -->
+	<td><div id="procenti0"></div></td>
+	<td><div id="procenti1"></div></td>
+	<td><div id="procenti2"></div></td>
+	<td><div id="procenti3"></div></td>
+	<td><div id="procenti4"></div></td>
+  </tr>
+  
+</table>
+
+<div class="naSredini"><button type="button" id="gumb" onclick="preveri()">Preveri</button></div>
+
+<p id="vsiProcenti"></p>
+
+</div>
+
+<div> <!-- kaj se moras se naučit -->
+	<p id="kajsemorassenaucit"></p>
+	<p id="napacniGlagoli0"></p>
+	<p id="napacniGlagoli1"></p>
+	<p id="napacniGlagoli2"></p>
+	<p id="napacniGlagoli3"></p>
+	<p id="napacniGlagoli4"></p>
+</div>
+
+<p class="verzija">v0.6 28.9.2018</p>
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<script>
+var vsiGlagoli =
+[
+[["peči (pecivo)", "peči"], ["ukazati"], ["začeti"], ["ugrizniti / grizti", "ugrizniti", "grizti"], ["zaviti / upogniti", "zaviti", "upogniti"], ["nuditi"], ["vezati"], ["prositi"], ["ostati"], ["peči (meso)", "peči"], ["zlomiti"], ["goreti"], ["prinesti"], ["misliti"], ["siliti / prodirati", "siliti", "prodirati"], ["smeti"], ["priporočati"], ["jesti"], ["voziti / peljati se", "peljati se", "peljati se"], ["pasti"], ["loviti / ujeti", "loviti", "ujeti"], ["najti"], ["leteti"], ["bežati"], ["teči (voda)", "teči"], ["žreti"], ["zmrzniti / zebsti", "zmrzniti", "zebsti"], ["roditi"], ["dati"], ["uspevati (rastlina)", "uspevati"], ["iti"], ["uspevati / posrečiti se", "uspevati", "posrečiti se"], ["veljati"], ["uživati (hrana in drugo)", "uživati"], ["zgoditi se"], ["zmagati / dobiti", "zmagati", "dobiti"], ["liti / zalivati", "liti", "zalivati"], ["biti enak / primerjati", "biti enak", "primerjati"], ["drseti /spodrsniti", "drseti", "spodrsniti"], ["kopati"], ["prijeti / zgrabiti", "prijeti", "zgrabiti"], ["imeti"], ["držati / ustaviti", "držati", "ustaviti"], ["viseti"], ["dvigniti"], ["imenovati se"], ["pomagati"], ["poznati"], ["zveneti"], ["priti"], ["moči / znati", "moči", "znati"], ["plaziti se"], ["vabiti / polniti", "vabiti", "polniti"], ["pustiti"], ["teči"], ["trpeti"], ["posoditi"], ["brati"], ["ležati"], ["lagati"], ["izogibati se"], ["marati"], ["morati"], ["vzeti"], ["imenovati"], ["žvižgati"], ["izvirati"], ["svetovati"], ["ribati / drgniti", "ribati", "drgniti"], ["trgati"], ["jezditi / jahati", "jezditi", "jahati"], ["teči / dirjati", "teči", "dirjati"], ["dišati / vohati", "dišati", "vohati"], ["klicati"], ["ustaviti"], ["ločiti"], ["sijati / zdeti se", "sijati", "zdeti se"], ["potiskati / porivati", "potiskati", "porivati"], ["streljati"], ["spati"], ["tepsti / udariti", "tepsti", "udariti"], ["plaziti se"], ["brusiti"], ["zapreti / zakleniti", "zapreti", "zakleniti"], ["rezati"], ["prestrašiti"], ["pisati"], ["kričati"], ["korakati"], ["molčati"], ["plavati"], ["izginiti"], ["priseči"], ["gledati / videti", "gledati", "videti"], ["biti"], ["poslati"], ["peti"], ["potopiti se"], ["sedeti"], ["naj bi"], ["cepiti (drva)", "cepiti"], ["govoriti"], ["skočiti"], ["pičiti / zbosti", "pičiti", "zbosti"], ["stati"], ["krasti"], ["vzpenjati se / naraščati", "vzpenjati se", "naraščati"], ["umreti"], ["smrdeti"], ["suniti / suvati", "suniti", "suvati"], ["prepirati se"], ["nositi"], ["srečati / zadeti", "srečati", "zadeti"], ["poganjati / gnati", "pognati", "gnati"], ["stopiti / brcniti", "stopiti", "brcniti"], ["piti"], ["varati / prevarati", "varati", "prevarati"], ["delati / početi / storiti", "delati", "početi", "storiti"], ["pokvariti"], ["pozabiti"], ["izgubiti"], ["oprostiti"], ["rasti"], ["umivati / prati", "umivati", "prati"], ["kazati"], ["obrniti"], ["snubiti"], ["postati"], ["vreči / metati", "vreči", "metati"], ["tehtati"], ["vedeti"], ["hoteti"], ["vleči / seliti se", "vleči", "seliti se"], ["siliti /prisiliti", "siliti", "prisiliti"]], //array za use slo prevode nem glagolov
+
+[["backen"], ["befehlen"], ["beginnen"], ["beißen"], ["biegen"], ["bieten"], ["binden"], ["bitten"], ["bleiben"], ["braten"], ["brechen"], ["brennen"], ["bringen"], ["denken"], ["dringen"], ["dürfen"], ["empfehlen"], ["essen"], ["fahren"], ["fallen"], ["fangen"], ["finden"], ["fliegen"], ["fliehen"], ["fließen"], ["fressen"], ["frieren"], ["gebären"], ["geben"], ["gedeihen"], ["gehen"], ["gelingen"], ["gelten"], ["genießen"], ["geschehen"], ["gewinnen"], ["gießen"], ["gleichen"], ["gleiten"], ["graben"], ["greifen"], ["haben"], ["halten"], ["hängen"], ["heben"], ["heißen"], ["helfen"], ["kennen"], ["klingen"], ["kommen"], ["können"], ["kriechen"], ["laden"], ["lassen"], ["laufen"], ["leiden"], ["leihen"], ["lesen"], ["liegen"], ["lügen"], ["meiden"], ["mögen"], ["müssen"], ["nehmen"], ["nennen"], ["pfeifen"], ["quellen"], ["raten"], ["reiben"], ["reißen"], ["reiten"], ["rennen"], ["riechen"], ["rufen"], ["schaffen"], ["scheiden"], ["scheinen"], ["schieben"], ["schießen"], ["schlafen"], ["schlagen"], ["schleichen"], ["schleifen"], ["schließen"], ["schneiden"], ["(er)schrecken", "schrecken ","erschrecken"], ["schreiben"], ["schreien"], ["schreiten"], ["schweigen"], ["schwimmen"], ["schwinden"], ["schwören"], ["sehen"], ["sein"], ["senden"], ["singen"], ["sinken"], ["sitzen"], ["sollen"], ["spalten"], ["sprechen"], ["springen"], ["stechen"], ["stehen"], ["stehlen"], ["steigen"], ["sterben"], ["stinken"], ["stoßen"], ["streiten"], ["tragen"], ["treffen"], ["treiben"], ["treten"], ["trinken"], ["trügen"], ["tun"], ["verderben"], ["vergessen"], ["verlieren"], ["verzeihen"], ["wachsen"], ["waschen"], ["weisen"], ["wenden"], ["werben"], ["werden"], ["werfen"], ["wiegen"], ["wissen"], ["wollen"], ["ziehen"], ["zwingen"]], //array za use nem glagole
+
+[["bäckt"], ["befiehlt"], ["beginnt"], ["beißt"], ["biegt"], ["bietet"], ["bindet"], ["bittet"], ["bleibt"], ["brät"], ["bricht"], ["brennt"], ["bringt"], ["denkt"], ["dringt"], ["darf"], ["empfiehlt"], ["isst"], ["fährt"], ["fällt"], ["fängt"], ["findet"], ["fliegt"], ["flieht"], ["fließt"], ["frisst"], ["friert"], ["gebiert"], ["gibt"], ["gedeiht"], ["geht"], ["es gelingt"], ["gilt"], ["genießt"], ["es geschieht"], ["gewinnt"], ["gießt"], ["gleicht"], ["gleitet"], ["gräbt"], ["greift"], ["hat"], ["hält"], ["hängt"], ["hebt"], ["heißt"], ["hilft"], ["kennt"], ["klingt"], ["kommt"], ["kann"], ["kriecht"], ["lädt"], ["lässt"], ["läuft"], ["leidet"], ["leiht"], ["liest"], ["liegt"], ["lügt"], ["meidet"], ["mag"], ["muss"], ["nimmt"], ["nennt"], ["pfeift"], ["quillt"], ["rät"], ["reibt"], ["reißt"], ["reitet"], ["rennt"], ["riecht"], ["ruft"], ["schafft"], ["scheidet"], ["scheint"], ["schiebt"], ["schießt"], ["schläft"], ["schlägt"], ["schleicht"], ["schleift"], ["schließt"], ["schneidet"], ["erschrickt"], ["schreibt"], ["schreit"], ["schreitet"], ["schweigt"], ["schwimmt"], ["schwindet"], ["schwört"], ["sieht"], ["ist"], ["sendet"], ["singt"], ["sinkt"], ["sitzt"], ["soll"], ["spaltet"], ["spricht"], ["springt"], ["sticht"], ["steht"], ["stiehlt"], ["steigt"], ["stirbt"], ["stinkt"], ["stößt"], ["streitet"], ["trägt"], ["trifft"], ["treibt"], ["tritt"], ["trinkt"], ["trügt"], ["tut"], ["verdirbt"], ["vergisst"], ["verliert"], ["verzeiht"], ["wächst"], ["wäscht"], ["weist"], ["wendet"], ["wirbt"], ["wird"], ["wirft"], ["wiegt"], ["weiß"], ["will"], ["zieht"], ["zwingt"]],
+
+[["backte/buk", "buk", "backte"], ["befahl"], ["begann"], ["biss"], ["bog"], ["bot"], ["band"], ["bat"], ["blieb"], ["briet"], ["brach"], ["brannte"], ["brachte"], ["dachte"], ["drang"], ["durfte"], ["empfahl"], ["aß"], ["fuhr"], ["fiel"], ["fing"], ["fand"], ["flog"], ["floh"], ["floss"], ["fraß"], ["fror"], ["gebar"], ["gab"], ["gedieh"], ["ging"], ["es gelang"], ["galt"], ["genoss"], ["geschah"], ["gewann"], ["goss"], ["glich"], ["glitt"], ["grub"], ["griff"], ["hatte"], ["hielt"], ["hing"], ["hob"], ["hieß"], ["half"], ["kannte"], ["klang"], ["kam"], ["konnte"], ["kroch"], ["lud"], ["ließ"], ["lief"], ["litt"], ["lieh"], ["las"], ["lag"], ["log"], ["mied"], ["mochte"], ["musste"], ["nahm"], ["nannte"], ["pfiff"], ["quoll"], ["riet"], ["rieb"], ["riss"], ["ritt"], ["rannte"], ["roch"], ["rief"], ["schuf"], ["schied"], ["schien"], ["schob"], ["schoss"], ["schlief"], ["schlug"], ["schlich"], ["schliff"], ["schloss"], ["schnitt"], ["erschrak"], ["schrieb"], ["schrie"], ["schritt"], ["schwieg"], ["schwamm"], ["schwand"], ["schwor"], ["sah"], ["war"], ["sandte"], ["sang"], ["sank"], ["saß"], ["sollte"], ["spaltete"], ["sprach"], ["sprang"], ["stach"], ["stand"], ["stahl"], ["stieg"], ["starb"], ["stank"], ["stieß"], ["stritt"], ["trug"], ["traf"], ["trieb"], ["trat"], ["trank"], ["trog"], ["tat"], ["verdarb"], ["vergaß"], ["verlor"], ["verzieh"], ["wuchs"], ["wusch"], ["wies"], ["wandte"], ["warb"], ["wurde"], ["warf"], ["wog"], ["wusste"], ["wollte"], ["zog"], ["zwang"]],
+
+[["habe gebacken"], ["habe befohlen"], ["habe begonnen"], ["habe gebissen"], ["habe gebogen"], ["habe geboten"], ["habe gebunden"], ["habe gebeten"], ["bin geblieben"], ["habe gebraten"], ["habe gebrochen"], ["habe gebrannt"], ["habe gebracht"], ["habe gedacht"], ["bin gedrungen"], ["habe gedurft"], ["habe empfohlen"], ["habe gegessen"], ["habe/bin gefahren", "habe gefahren", "bin gefahren"], ["bin gefallen"], ["habe gefangen"], ["habe gefunden"], ["bin geflogen"], ["bin geflohen"], ["ist geflossen"], ["habe gefressen"], ["habe gefroren"], ["habe geboren"], ["habe gegeben"], ["ist gediehen"], ["bin gegangen"], ["ist gelungen"], ["habe gegolten"], ["habe genossen"], [" ist geschehen"], ["habe gewonnen"], ["habe gegossen"], ["habe geglichen"], ["bin geglitten"], ["habe gegraben"], ["habe gegriffen"], ["habe gehabt"], ["habe gehalten"], ["habe gehangen"], ["habe gehoben"], ["habe geheißen"], ["habe geholfen"], ["habe gekannt"], ["hat geklungen"], ["bin gekommen"], ["habe gekonnt"], ["bin gekrochen"], ["habe geladen"], ["habe gelassen"], ["bin gelaufen"], ["habe gelitten"], ["habe geliehen"], ["habe gelesen"], ["habe gelegen"], ["habe gelogen"], ["habe gemieden"], ["habe gemocht"], ["habe gemusst"], ["habe genommen"], ["habe genannt"], ["habe gepfiffen"], ["ist gequollen"], ["habe geraten"], ["habe gerieben"], ["habe gerissen"], ["habe/bin geritten", "habe geritten", "bin geritten"], ["bin gerannt"], ["habe gerochen"], ["habe gerufen"], ["habe geschaffen"], ["habe geschieden"], ["habe geschienen"], ["habe geschoben"], ["habe geschossen"], ["habe geschlafen"], ["habe geschlagen"], ["bin geschlichen"], ["habe geschliffen"], ["habe geschlossen"], ["habe geschnitten"], ["bin erschrocken"], ["habe geschrieben"], ["habe geschrien"], ["bin geschritten"], ["habe geschwiegen"], ["bin geschwommen"], ["bin geschwunden"], ["habe geschworen"], ["habe gesehen"], ["bin gewesen"], ["habe gesandt"], ["habe gesungen"], ["bin gesunken"], ["habe gesessen"], ["habe gesollt"], ["habe gespalten"], ["habe gesprochen"], ["bin gesprungen"], ["habe gestochen"], ["habe gestanden"], ["habe gestohlen"], ["bin gestiegen"], ["bin gestorben"], ["habe gestunken"], ["habe gestoßen"], ["habe gestritten"], ["habe getragen"], ["habe getroffen"], ["habe getrieben"], ["habe/bin getreten", "habe getreten", "bin getreten"], ["habe getrunken"], ["habe getrogen"], ["habe getan"], ["habe verdorben"], ["habe vergessen"], ["habe verloren"], ["habe verziehen"], ["bin gewachsen"], ["habe gewaschen"], ["habe gewiesen"], ["habe gewandt"], ["habe geworben"], ["bin geworden"], ["habe geworfen"], ["habe gewogen"], ["habe gewusst"], ["habe gewollt"], ["habe/bin gezogen", "habe gezogen", "bin gezogen"], ["habe gezwungen"]]
+]
+
+//console.log("");
+
+var i, l; //spremenljivke kot mesto arraya
+var s = 0; //spremenljivka za switch
+var pravilni = [0, 0, 0, 0, 0]; //spremenljivka za računanje procentov
+var steviloGlagolov = [0, 0, 0, 0, 0];
+var a; //spremenljivka za vse stolpce
+var nemCrka = ["ä", "ö", "ü", "ß"]; //array za vse nem črke
+var navadneCrke = ["A", "O", "U", "S"];
+var celica; //spremenljivka za id določene celice
+var f = [0, 0, 0, 0, 0]; //f kot flag za Preskoči
+var ff = [0, 0, 0, 0, 0]; //f kot flag za pokaziGlagolskoObliko
+var fff = [0, 0, 0, 0, 0]; //f kot flag za vpisiGlagolskoObliko
+//var b; //spremenljivka za nem črke
+//var c, d; //spremenljivka za nem črke
+var napacniGlagoli = [[], [], [], [], []]; //za sezanam napačnih glagolov
+var imenaStolpcev = ["Slovenski prevod", "Infinitiv", "3. Person", "Präteritum", "Perfekt"];
+
+/*function nemCrke(c, d)
+{
+	document.getElementById("input" + c).value = document.getElementById("input" + c).value + nemCrka[d]; //dobi kar je že napisano in doda ustrezno črko
+	document.getElementById("input" + c).focus(); //fokusira se na vpisno okno
+	console.log(c, d);
+
+	for (var o = 0; o <= 4; o++)
+	{
+		if (fff[o])
+		{
+			var input = document.getElementById("input" + o).hasFocus;
+			if (input)
+			{
+				document.getElementById("input" + o).value = document.getElementById("input" + o).value + nemCrka[d]; //dobi kar je že napisano in doda ustrezno črko
+				document.getElementById("input" + o).focus(); //fokusira se na vpisno okno
+			}
+
+		}
+	}
+}*/
+
+function insertAtCaret(areaId, text) {
+	var txtarea = document.getElementById(areaId);
+	if (!txtarea) { //če ne obstaja to vpisno okno
+	return;
+	}
+
+	var scrollPos = txtarea.scrollTop;
+	var strPos = 0;
+	var br = ((txtarea.selectionStart || txtarea.selectionStart == '0') ?
+	"ff" : (document.selection ? "ie" : false));
+	if (br == "ie") {
+	txtarea.focus();
+	var range = document.selection.createRange();
+	range.moveStart('character', -txtarea.value.length);
+	strPos = range.text.length;
+	} else if (br == "ff") {
+	strPos = txtarea.selectionStart;
+	}
+
+	var front = (txtarea.value).substring(0, strPos);
+	var back = (txtarea.value).substring(strPos, txtarea.value.length);
+	txtarea.value = front + text + back;
+	strPos = strPos + text.length;
+	if (br == "ie") {
+	txtarea.focus();
+	var ieRange = document.selection.createRange();
+	ieRange.moveStart('character', -txtarea.value.length);
+	ieRange.moveStart('character', strPos);
+	ieRange.moveEnd('character', 0);
+	ieRange.select();
+	} else if (br == "ff") {
+	txtarea.selectionStart = strPos;
+	txtarea.selectionEnd = strPos;
+	txtarea.focus();
+	}
+
+	txtarea.scrollTop = scrollPos;
+	}
+
+function nakljucniGlagol() //funkcija ki izbere nakljucni glagol
+{
+	i = Math.floor(Math.random() * vsiGlagoli[0].length);
+}
+
+function habeBin(hb)
+{
+	var habebin = ["habe ", "bin "];
+	var split = document.getElementById("input4").value.toString();
+	split = split.split(" ");
+
+	if (split[1] == null)
+	{
+		document.getElementById("input4").value = habebin[hb] + document.getElementById("input4").value;
+	}
+	else
+	{
+		document.getElementById("input4").value = habebin[hb] + split[1];
+	}
+
+	document.getElementById("input4").focus();
+}
+
+function vedno()
+{
+	for (a = 0; a <= 4; a++) { //za vse stolpce se določi vsebina
+		celica = document.getElementById(document.getElementById("tabela").rows[3].cells[a].id);
+
+		if (document.getElementById("preskoci" + a).checked) //če je označen prvi radio gumb: Preskoči
+		{
+			if (fff[a] == 1) //za vsak solpec z vpisom
+			{
+				document.getElementById("pravilnost" + a).innerHTML = ""; //izbriše se pravilnost
+			}
+
+			celica.innerHTML = ""; //celica je prazna
+			f[a] = 1;
+			ff[a] = 0;
+			fff[a] = 0;
+			//console.log("gumb1");
+		}
+		else if (document.getElementById("pokaziGlagolskoObliko" + a).checked) //če je označen drugi radio gumb: pokaziGlagolskoObliko
+		{
+			if (fff[a] == 1)
+			{
+				document.getElementById("pravilnost" + a).innerHTML = ""; //izbriše se pravilnost
+			}
+
+			celica.innerHTML = vsiGlagoli[a][i][0]; //nakljucen glagol se izpise
+			f[a] = 0;
+			ff[a] = 1;
+			fff[a] = 0;
+			//console.log("gumb2");
+		}
+		else if ((document.getElementById("vpisiGlagolskoObliko" + a).checked) && (fff[a] == 0))  //če je označen tretji radio gumb: vpisiGlagolskoObliko
+		{
+			celica.innerHTML = "";//izprazni se celica
+
+			//v vztrezno celico se vztavi okence za vpis in gumbi
+			var vpis = document.createElement("INPUT");
+			vpis.setAttribute("id", "input" + a); //<input id="input">
+			vpis.setAttribute("class", "input");
+
+			if (a == 4)
+			{
+				/*
+				var gumbHabe = document.createElement("INPUT");
+				gumbHabe.setAttribute("id", "gumbHabe");
+				gumbHabe.setAttribute("type", "radio");
+				gumbHabe.setAttribute("name", "habeBin");
+				//gumbHabe.setAttribute("onclick", "insertAtCaret(input4, habe)");
+				var gumbHabeB = document.createTextNode("Habe");
+				gumbHabe.appendChild(gumbHabeB);
+
+				var gumbBin = document.createElement("INPUT");
+				gumbBin.setAttribute("id", "gumbBin");
+				gumbBin.setAttribute("type", "radio");
+				gumbBin.setAttribute("name", "habeBin");
+				//gumbBin.setAttribute("onclick", "insertAtCaret(input4, bin)");
+				var gumbBinB = document.createTextNode("Bin");
+				gumbBin.appendChild(gumbBinB);
+
+				var vpisHabeBin = document.createElement("INPUT");
+				vpisHabeBin.setAttribute("id", "inputHabeBin");
+				vpisHabeBin.setAttribute("autofocus", "");
+				celica.appendChild(vpisHabeBin);
+				document.getElementById("inputHabebin").size = 10;
+				document.getElementById("inputHabebin").focus();
+				*/
+
+				var gumbHabe = document.createElement("BUTTON");
+				gumbHabe.setAttribute("id", "gumbHabe");
+				gumbHabe.setAttribute("onclick", "habeBin(0)");
+				var gumbHabeB = document.createTextNode("Habe");
+				gumbHabe.appendChild(gumbHabeB);
+
+				var gumbBin = document.createElement("BUTTON");
+				gumbBin.setAttribute("id", "gumbBin");
+				gumbBin.setAttribute("onclick", "habeBin(1)");
+				var gumbBinB = document.createTextNode("Bin");
+				gumbBin.appendChild(gumbBinB);
+
+				celica.appendChild(gumbHabe);
+				celica.appendChild(gumbBin);
+			}
+
+			celica.appendChild(vpis); //v celico se doda vpsno okno
+			
+			/*for (var b = 0; b <= 3; b++) //naredi vse gumbe za nem črke
+			{ 
+				var gumb = document.createElement("BUTTON");
+				gumb.setAttribute("type", "button");
+				//gumb.setAttribute("id", "nemGumb" + a + b); //nemgumb + v katerem stolcu + katera črka
+				gumb.onclick = function(){nemCrke(a, b)};
+				console.log(a, b);
+				var Bgumb = document.createTextNode(nemCrka[b]); //<button type="button" onclick="nemCrke(a, b)>nemCrka[b]</button>
+				gumb.appendChild(Bgumb);
+
+				gumb.addEventListener('click', function() {
+    				nemCrke(a, b);
+				}, false);
+
+				celica.appendChild(gumb);
+			}*/
+			vpis.focus();
+
+			f[a] = 0;
+			ff[a] = 0;
+			fff[a] = 1;
+			//console.log("gumb3");
+		}
+	}
+	a = 0;	
+}
+
+function onLoad()
+{
+
+	nakljucniGlagol(); 
+
+	document.addEventListener("keyup", function(event) { //preveri za pritisk tipke
+			//event.preventDefault();
+
+			if ((event.keyCode === 13) && (document.activeElement.id != "gumb")) //preveri če je pritisnjena tipka enter in ni ta gumb fokusiran
+			{ 
+				document.getElementById("gumb").click(); //klikne na gumb preveri
+			}
+
+			if (event.keyCode === 17) //preveri če je pritisnjena tipka Ctrl
+			{
+				var r = 1;
+				tabLoop:
+				for (var o = 0; o <= 4; o++)
+				{
+					if (document.activeElement.id == "input" + o)
+					{
+						for (var t = 1; t <= 4; t++)
+						{
+							if (fff[o + t])
+							{
+								document.getElementById("input" + (o + t)).focus();
+								r = 0;
+								break tabLoop;
+							}
+						}
+						for (var t = 0; t <= 4; t++)
+						{
+							if (fff[t])
+							{
+								document.getElementById("input" + t).focus();
+								r = 0;
+								break tabLoop;
+							}
+						}
+					}
+				}
+				for (var o = 0; o <= 4; o++)
+				{
+					if (fff[o] && (r))
+					{
+						document.getElementById("input" + o).focus();
+						break;
+					}
+				}
+			}
+
+			var crka = navadneCrke.indexOf(String.fromCharCode(event.keyCode)); //katera črka je bila pritisnjena
+			if ((crka != -1) && (event.altKey))  //preveri če je pritisnjena tipka a, o, u, s in alt
+			{
+				
+				if (document.getElementById(document.activeElement.id) != null) //če je kako vpisno okno fokusirano
+				{
+					insertAtCaret(document.activeElement.id, nemCrka[crka]);
+					//document.getElementById(document.activeElement.id).value = document.getElementById(document.activeElement.id).value + nemCrka[crka]; //dobi kar je že napisano in doda ustrezno črko
+				}
+				
+			}
+
+			});
+
+	setInterval(vedno, 100); //vedno se ponavlja loop, vsake 100ms
+}
+
+function procentiPravilnih(o) //za izračun procentov pravilnih glagolov
+{
+	if (fff[o])
+	{
+		var procent = (pravilni[o] / steviloGlagolov[o]) * 100;
+		procent = parseInt(procent.toString()); //pretvori se v intiger in string
+		document.getElementById("procenti" + o).setAttribute("class", "procenti");
+		document.getElementById("procenti" + o).innerHTML = procent + "%";
+	}
+
+	if (fff.indexOf(1) > -1)
+	{
+		var vsiPravilni = pravilni.reduce((a, b) => a + b, 0);
+		var vsiSteviloGlagolov = steviloGlagolov.reduce((a, b) => a + b, 0);
+		var vsiProcenti = (vsiPravilni / vsiSteviloGlagolov) * 100;
+		vsiProcenti = parseInt(vsiProcenti.toString()); //pretvori se v intiger in string
+		document.getElementById("vsiProcenti").innerHTML = "Delež pravilnih glagolov: " + "<div>" + vsiPravilni + "</div>" + " od " + "<div>" + vsiSteviloGlagolov + "</div>" + " oziroma " + "<div>" + vsiProcenti + "</div>" + "%"; //vse se izpiše
+	}
+}
+
+function preveri()
+{
+	switch(s){
+		case 0:
+			document.getElementById("gumb").innerHTML = "Nadaljuj"; //sprmeni gumb v Nadaljuj
+			var kprejsni;
+			var e = 0; //kot flag za pravilnost
+
+			for (var o = 0; o <= 4; o++)
+			{
+				document.getElementById("preskoci" + o).setAttribute("disabled","disabled"); //vsak gumb deaktivira
+				document.getElementById("pokaziGlagolskoObliko" + o).setAttribute("disabled","disabled");
+				document.getElementById("vpisiGlagolskoObliko" + o).setAttribute("disabled","disabled");
+				
+				document.getElementsByClassName("vsiGumbi")[o].getElementsByTagName("LABEL")[0].setAttribute("class","prozorno"); //vsak gumb postane prozoren malo
+				document.getElementsByClassName("vsiGumbi")[o].getElementsByTagName("LABEL")[1].setAttribute("class","prozorno");
+				document.getElementsByClassName("vsiGumbi")[o].getElementsByTagName("LABEL")[2].setAttribute("class","prozorno");
+				
+				var p;
+				if (fff[o] == 1)
+				{
+
+					var odgovor = document.getElementById("input" + o).value.toLowerCase().replace(/\s\s+/g, " "); //dobi odgovor uporabnika
+					var k = -2;
+					for (p = 0; p <= vsiGlagoli[0].length - 1; p++) //p je array, kjer je pravilni odgovor
+					{
+						var kprejsni = vsiGlagoli[o][p].indexOf(odgovor) - 1 //preveri ce se odgovor ujema z kaksnim izmed nem glagolov
+						if (kprejsni > k)
+						{
+							k = kprejsni; //k je pravilni odgovor v najbolj notranjem arrayu
+							e = 1; //e je flag za pravilnost, ker p nesme bit vec kot arrayev
+							break; //to pomeni da je našel pravilni odgovor v arrayu p na k mestu - 1
+						}
+					}
+					
+					steviloGlagolov[o]++;
+
+					//če je odgovor pravilen se zpise pravilno oz narobe
+					if (p == i && e) //PRAVILNO
+					{
+						e = 0;
+						document.getElementById("pravilnost" + o).setAttribute("class", "pravilno");
+						document.getElementById("pravilnost" + o).innerHTML = "PRAVILNO!";
+						pravilni[o]++; //za izračun procetov
+					}
+					
+					else //NAROBE
+					{
+						document.getElementById("pravilnost" + o).setAttribute("class", "narobe");
+						document.getElementById("pravilnost" + o).innerHTML = "NAROBE!";
+
+						napacniGlagoli[o].push(vsiGlagoli[o][i][0]); //doda glagol ki je bil napačen glede na stolpec
+						//napacniGlagoli.toString;
+						/*if (napacniGlagoli.length > 1)
+						{
+							//napacniGlagoli.split(",").join("<br />");
+							//napacniGlagoli.replace(",", "<br />");
+							napacniGlagoli.join("\r\n");
+						}*/
+						document.getElementById("kajsemorassenaucit").innerHTML="Kaj se moraš še naučit:"; //napise zacetni stavek
+						document.getElementById("napacniGlagoli" + o).innerHTML = imenaStolpcev[o] + ": " + napacniGlagoli[o]; //izpis
+
+
+
+						celica = document.getElementById(document.getElementById("tabela").rows[3].cells[o].id); //v div je glagol, ki ga je bilo vpisati
+						var divv = document.createElement("DIV"); //div element z id napacniGlagoli + o
+						divv.setAttribute("id", "pravilniGlagol" + o); 
+						var narobniGl = document.createTextNode("Pravilni glagol: " + vsiGlagoli[o][i][0]); 
+						divv.appendChild(narobniGl); //v celico appendam spodaj
+						
+						
+						if (document.getElementById("input" + o).value != "") //če ni odgovor prazen
+						{
+							var nepravilnostCrk = [[], [], [], []];
+							var nepravilnostCrkSt = [];
+							for (var z = 0; z <= vsiGlagoli[o][i].length - 1; z++) //za vsako besedo v arrayu glagola
+							{
+								for (var u = 0; u <= odgovor.length - 1; u++) //za vsako črko odgovora
+								{
+									var nemGlagolCrka = vsiGlagoli[o][i][z].charAt(u);
+									var odgovorCrka = odgovor.charAt(u);
+									if (nemGlagolCrka !== odgovorCrka)
+									{
+										nepravilnostCrk[z].push(u); //če je doočena črka nepravilna se shrani njena pozicja
+									}
+								}
+								nepravilnostCrkSt.push(nepravilnostCrk[z].length);
+							}
+
+							var najblizjaBeseda = nepravilnostCrkSt.indexOf(Math.min.apply(Math, nepravilnostCrkSt)); //beseda, ki ima najmanj različnih črk od originala
+							var popravljenoPlac = document.createElement("DIV");
+							popravljenoPlac.setAttribute("id", "popravljenoPlac" + o);
+							celica.appendChild(popravljenoPlac);
+							var poprava = document.getElementById("input" + o).value.split("");
+							var popravljeno;
+
+							for (var r = 0; r <= nepravilnostCrk[najblizjaBeseda].length - 1; r++) //za vsako napako v besedi
+							{
+								poprava[nepravilnostCrk[najblizjaBeseda][r]] = poprava[nepravilnostCrk[najblizjaBeseda][r]].bold();
+							}
+							popravljeno = poprava.join("");
+
+							document.getElementById("popravljenoPlac" + o).innerHTML = popravljeno;
+						}
+						document.getElementById("input" + o).setAttribute("class", "skrito"); //odstrani se input in gumba habe in bin
+						if (document.getElementById("gumbHabe") != undefined)
+						{
+							document.getElementById("gumbHabe").setAttribute("class", "skrito");
+							document.getElementById("gumbBin").setAttribute("class", "skrito");
+						}
+						celica.appendChild(divv); //<div id="napacniGlagoli" + o>"Pravilni glagol: " + vsiGlagoli[o][i][0]</div>
+					}
+				}
+				procentiPravilnih(o);
+			}
+			s = 1;
+			break;
+		
+		case 1:
+			document.getElementById("gumb").innerHTML = "Preveri"; //spremeni gumb v Preveri
+			var j = 1;
+
+			for (var o = 0; o <= 4; o++)
+			{
+				document.getElementById("preskoci" + o).removeAttribute("disabled"); //vsi gumbi so aktivirani
+				document.getElementById("pokaziGlagolskoObliko" + o).removeAttribute("disabled");
+				document.getElementById("vpisiGlagolskoObliko" + o).removeAttribute("disabled");
+
+				document.getElementsByClassName("vsiGumbi")[o].getElementsByTagName("LABEL")[0].removeAttribute("class"); //vsi gumbi niso več prozorni
+				document.getElementsByClassName("vsiGumbi")[o].getElementsByTagName("LABEL")[1].removeAttribute("class");
+				document.getElementsByClassName("vsiGumbi")[o].getElementsByTagName("LABEL")[2].removeAttribute("class");
+
+				if (fff[o] == 1)
+				{
+					document.getElementById("input" + o).setAttribute("class", "input"); //znova se pojavi input
+
+					if ((document.getElementById("gumbHabe")) != undefined) //znova se pojavijo gumba habe in bin
+					{
+						document.getElementById("gumbHabe").setAttribute("class", "");
+						document.getElementById("gumbBin").setAttribute("class", "");
+					}
+
+					if (document.getElementById("popravljenoPlac" + o) != undefined) //odstrani popravljeno, če obstaja
+					{
+						document.getElementById("popravljenoPlac" + o).remove(); //izbriše popravljeno
+					}
+
+					if (j)
+					{
+						document.getElementById("input" + o).focus() //fokusira se na prvo vpisno okno
+						j = 0;
+					}
+
+					document.getElementById("pravilnost" + o).innerHTML = ""; //izbriše se pravilnost
+					document.getElementById("input" + o).value = ""; //izbrise kar je bilo prej napisano
+					if (document.getElementById("pravilniGlagol" + o) != null)
+					{
+						document.getElementById("pravilniGlagol" + o).remove(); //izbriše se pravilni glagol (div)
+					}
+				}
+			}
+			
+			nakljucniGlagol(); //izbere naslednji naključni glagol
+			s = 0;
+			break;
+	}
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>

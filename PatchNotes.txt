@@ -1,0 +1,142 @@
+0.1
+- slo prevod
+- infinitiv vpis
+
+0.2
+- enter lahko klikneš namesto gumba
+- izpiše se procent pravilnih glagolov
+- odgovor se sam izbriše
+- gumbi za nem črke
+
+0.3
+- dodan stolpec 3. oseba
+- dodan stolpec Prac...
+- dodan stolpec Perfekt
+- odstranjeni gumbi za nem črke
+- dodane keyboard bližnjice alt + aous
+- dodani radio bumbi za onemogočeno, nepisano in vpis
+
+0.4
+- dodani nasveti
+- prikaže se pravilni glagol, če ga napačno napišeš
+- naredi se seznam glagolov, ki so bili napačno napisani
+- lahko vpišeš katerekoli prevod, če ima glagol več prevodov
+- z CTRLjem se lahko pomikaš med vpisnimi okni
+
+0.5
+- spremenjeni radio gumbi (besedilo)
+- dodana habe in bin gumba pri Perfektu
+- UTF-8
+- odebeljo se črke, ki so nepravilne
+- procenti pravilnih se izpišejo pod vsakim stolpcem
+- dodani linki za sich glagole in zasluge
+- nekaj sprememb pri fokusiranju
+
+0.6
+- CSS
+- radio gumbi so postali toggle gumbi
+- pomoč se je premaknila v oblaček ko hoveraš nad besedo Pomoč?
+- vizualno spremenjeni:
+- vsi naslovi
+- ozadje
+- vsi gumbi
+- procenti pod stolpci
+- pravilno/nepravilno
+- verzija
+
+0.7
+- dodani zavihki
+- dodani sich glagoli:
+- 2 stolpca
+- akkusativ ali dativ
+- vizualno spremenjeni:
+- zavihki
+- vsi procenti
+- popravljen glagol
+- pravilni glagol
+- pokazi glagolsko obliko
+- vsi gumbi
+
+0.8
+- procenti se shranijo v local storage
+- dodan gumb za resetiranje procentov
+- dodani keywords in opis strani
+- dodana pomoč za sich glagole
+- preveri če je spletna stran prikazana na telefonu
+- dodan css datoteka za mobilne naprave
+- dodano iskanje glagola:
+- iskan glagol poišče v vseh stolpcih
+- izpiše se najbližji glagol v vseh oblikah
+- vizualno spremenjena stran iskanje
+- vizualno spremenjena tabela z iskanimi glagoli
+- dodana pomoč za iskanje
+
+0.9
+- vizualni in slovnični popravki
+- dodan autocomplete pri isknaju
+- pri preverjanju vpisanega glagola preveri vsako besedo posebej
+- dodani gumbi pri iskanju
+- ne dovoli presledka na začetku vpisnega okna
+- habe ali bin autocompleta če pritisnemo h ali b
+- odstranjena koda za kaj se moraš še naučit
+- dodan zavihek kaj se moraš se naučiti
+- v local storage dodani napačno napisani glagoli
+- ob hover čez napačni glagol se prikažejo vse oblike
+- vizualno spremenjeni kajsemoraššenaučiti
+- napišejo se napačni glagoli in ostali podatki za vsak dan z datumom
+- popravljena pomoč
+- gumb ponastavi izbriše samo procente in napačne glagole za današnji dan
+- ob hover čez naslov stolca se pokaže statistika za ta stolpec
+
+1.0
+- vizualni in slovnični popravki
+- popravljena pomoč
+- izboljšava sich popravljanja
+- dodani checkboxi pri akkusativ in dativ
+- dodan dodatek za monotoring stran
+- dodan robot.txt za crawlarje in bote
+- dodana kripto denarnica za brave browser
+- popravki za pravilno delovanje v brskalniku IE 11,10, brez local storega
+- v local storegu se shranijo ključi najprej datum nato vsebina
+- dodan wildcard * pri iskanju
+- pri iskanju se odebelji iskana beseda
+- iskanje druge ali tretje besede deluje
+- popravljena napaka pri iskanju z nem črkami
+- dodani vsiglagoli.js kjer je array z vsemi glagoli za lažje popravljanje
+- shrani se samo mesto napačnega glagola ne cela beseda
+- CSS ZA MOBILNE NAPRAVE:
+- barva theme-color spremenjena na oranžno
+- user-scalable: no
+- odstranitev naslovov
+- večina padding je 0
+- zmanjšan font
+- word wrapping
+- razlika med landscape in portraid (navadna oz členjena tabela)
+- okoli gumbov je okvir
+- enter - pomakne se fokus okna naprej, razen če je zadno okno
+- opozorilo za obračanje telefona, če je v portraid modu
+- ostali manjši popravki
+
+1.1
+- popravljeni glagoli
+- združena galgola kriechen in schleichen v en glagol
+- pri iskanju se pokažejo prva oblika glagolov
+- popravljena razvrstitev datumov pri kajsemorassenauciti
+- če je telefon v portraid modu se namesto okenca z besedilom pokaže slika
+- popravljeno iskanje glagolov ko je več besed
+- dodana knjižnica za izdelovanje grafov chart.js
+- spremenjeno ozadje pri besedah pri kajsemorassenaučit
+- ko narobe vpišeš sich glagol ki ima več možnosti
+- dodan zavihek STATISTIKA:
+- dodani lokalni grafi za nem nepravilne glagole in sich glagole
+- ob kliku na legendo izginejo pari in ne posamezno
+- pomoč pri statisiki
+- napredek po dnevih
+- procenti vseh pravilnih
+- lokalno štetje skupnega seštevka
+- gumb da izgine skupni seštevek
+- top 10 najpogostejših napak pri navadnih in sich
+
+1.2
+- manjši popravki
+- 

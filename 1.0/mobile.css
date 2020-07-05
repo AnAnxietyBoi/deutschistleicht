@@ -1,0 +1,133 @@
+@media screen and (min-width:320px) and (max-width:767px) and (orientation:landscape) {
+    td, th {
+        display: table-cell;
+        padding: 0px;
+        word-wrap: break-word;
+    }
+
+    th, .nasloviStolpcev td {
+        word-wrap: normal;
+    }
+
+    .nasloviStolpcev {
+        font-size: 28px;
+    }
+
+    .pokaziGl {
+        padding: 3px;
+        overflow: auto;
+    }
+
+    .narobe {
+        font-size: 25px;
+    }
+
+    .pravilno {
+        font-size: 25px;
+    }
+
+    .popravljeno {
+        font-size: 30px;
+    }
+      
+    .vsiGumbi label span {
+        font-size: 23px;
+        padding: 5px 0px;
+        border: solid 1px rgb(185, 185, 185);
+    }
+
+    body {
+        /*display: wrap;
+        flex-wrap: wrap;*/
+        overflow: auto;
+    }
+}
+
+@media screen and (orientation:portrait) {
+    td, th {
+        display: block;
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+/*body {
+    font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+}*/
+
+td, th {
+    width: 100%;
+}
+
+#pomoc span {
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    padding: 2px;
+}
+
+.naslov {
+    border-width: 4px;
+    display: none;
+    font-size: 1.5em;
+}
+
+.verzija {
+    left: 5px;
+    font-size: 12px;
+}
+
+.pravilniGlagol {
+    padding: 0px;
+}
+
+.popravljeno {
+    padding: 0px;
+}
+
+#gumb {
+    margin-top: 0px;
+}
+
+.pravilniGlagol {
+    padding: 0px;
+}
+
+#vsiProcenti {
+    margin-top: 0px;
+}
+
+/*SAMO ZA SICH GLAGOLE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.sich {
+    width: 100%;
+}
+
+.vsiGumbi label input[type="checkbox"] {
+    bottom: 15px;
+}
+      
+/*SAMO ZA ISKANJE////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.autocomplete-items {
+    width: 100%;
+    left: 0%;
+}
+
+#iskaniGlagol {
+    font-size: 50px;
+    width: 100%;
+}
+
+.tabela.iskanje td, .tabela.iskanje tr{
+    border: 3px solid #ddd;
+    padding-top: 0px;
+    font-size: 30px;
+}
+
+/*SAMO ZA KAJSEMORAŠŠENAUČIT////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/

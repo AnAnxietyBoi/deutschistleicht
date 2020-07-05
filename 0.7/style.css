@@ -1,0 +1,363 @@
+body {
+    background-color: rgb(173, 254, 177);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    font-size: 25px;
+}
+
+.naSredini {
+    text-align: center;
+}
+
+.tabela {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    /*padding: 20px;*/
+}
+
+td {
+    padding-bottom: 15px;
+}
+
+.skrito {
+    display: none;
+}
+
+.prikazano {
+    display: block;
+}
+
+#gumb {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 177, 60);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  #gumb:hover {background-color: #9c5e00}
+  
+  #gumb:active {
+    background-color: #9c5e00;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.verzija {
+    color: #a5a5a5;
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    font-size: 16px;
+}
+
+.naslov {
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(255, 123, 0);
+    border-radius: 25px;
+    /*border-width: 1px;*/
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #ffe9c9;
+}
+
+/*padding je rezerviran plac v elementu, v mejah, margin pa rezerviran plac okoli elementa, izven meja*/
+.input {
+    border: 3px solid rgb(255, 145, 0);
+    border-radius: 4px;
+    outline: none;
+    background-color: rgb(255, 237, 209);
+    width: 50%;
+    padding: 5px 10px;
+    font-size: 30px;
+}
+
+.nasloviStolpcev {
+    font-size: 35px;
+    color: #ac4d00;
+}
+
+button {
+    font-size: 25px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 177, 60);
+}
+    button:hover {background-color: #9c5e00}
+
+.pravilno {
+    font-size: 28px;
+    color: #006800;
+    font-weight: bold;
+}
+
+.narobe {
+    font-size: 28px;
+    color: red;
+    font-weight: bold;
+}
+
+.procenti {
+    font-weight: bold;
+    background-color: #ffddaa;
+    border: 3px solid #616161;
+    border-radius: 5px;
+    display: inline;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.vsiGumbi {
+    background-color:rgb(255, 214, 137);
+    border-radius: 4px;
+    /*border: 1px solid #D0D0D0;*/
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .vsiGumbi label span {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0px;
+    display: block;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .vsiGumbi label span:hover {
+    background-color: rgb(255, 190, 68);
+  }
+
+  .vsiGumbi label input[type="radio"] {
+    position:absolute;
+    visibility: hidden;
+  }
+  
+    input[type="radio"]:checked + span {
+        background-color:#404040;
+        color:#F7F7F7;
+    }
+
+.prozorno span{
+    opacity: 0.6;
+}
+
+.pokaziGl {
+    font-size: 30px;
+    color: #000000;
+    background-color: #ffe8be;
+    border-radius: 10px;
+    display: inline;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid #6e6e6e;
+}
+
+#vsiProcenti {
+    display: inline-block;
+    background-color: #ffdb97b0;
+    margin-top: 20px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+    #vsiProcenti div {
+        display: inline-block;
+        font-weight: bold;
+        border: 2px outset #3f3f3f;
+        background-color: #ffdfa3;
+        padding: 3px;
+        border-radius: 5px;
+    }
+
+.pravilniGlagol {
+    display: inline-block;
+    font-size: 25px;
+    background-color: #ffdb97b0;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+    .pravilniGlagol span {
+        display: inline-block;
+        font-weight: bold;
+        display: inline-block;
+        font-weight: bold;
+        border: 2px outset #3f3f3f;
+        background-color: #ffdfa3;
+        padding: 3px;
+        border-radius: 5px;
+    }
+
+/*.zavihki tr td {
+    font-size: 25px;
+    background-color: #414141;
+    color: #ffffff;
+    padding-bottom: 0px;
+}
+
+    #nav {
+        background-color: #ff9d1d;
+        color: #ffffff;
+        padding-bottom: 0px;
+    }*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ff8800;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+    li:last-child {
+        border-right: none;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 5px 20px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #4d2b00;
+    }    
+
+    .active {
+        display: inline-block;
+        background-color: #2c2c2c;
+    }
+
+#pomoc {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+    #pomoc:hover {
+        background-color: #4d2b00;
+    }
+
+    #pomoc span {
+        color: #000000;
+        display: none;
+        background-color: yellow;
+        padding: 20px;
+        position: absolute;
+        height: 450px;
+        width: 650px;
+        right: 0;
+        z-index: 2;
+        overflow: auto;
+        text-align: left;
+    }
+
+    #pomoc:hover span {
+        display: block;
+    }
+    
+/*oblacek*/
+/*span {
+        background: none repeat scroll 0 0 #F8F8F8;
+        border: 5px solid #DFDFDF;
+        color: #717171;
+        font-size: 13px;
+        height: 30px;
+        letter-spacing: 1px;
+        line-height: 30px;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        top: -80px;
+        left:-30px;
+        display:none;
+        padding:0 20px;
+    
+    }
+    span:after {
+        content:'';
+        position:absolute;
+        bottom:-10px;
+        width:10px;
+        height:10px;
+        border-bottom:5px solid #dfdfdf;
+        border-right:5px solid #dfdfdf;
+        background:#f8f8f8;
+        left:50%;
+        margin-left:-5px;
+        -moz-transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        transform:rotate(45deg);
+    }
+    
+    #pomoc {
+        margin:100px;
+        float:left;
+        position:relative;
+        cursor:pointer;
+    }
+    
+    #pomoc:hover span{
+        display:block;
+    }*/
+  
+    
+.popravljeno {
+    font-size: 30px;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+}
+
+    .popravljeno span {
+        font-weight: 800;
+    }
+
+/*SAMO ZA SICH GLAGOLE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.sich {
+    width: 50%;
+    margin-left:auto; 
+    margin-right:auto;
+    /*padding: 20px;*/
+}
+
+.vsiGumbi label input[type="checkbox"] {
+    position:absolute;
+    visibility: hidden;
+  }
+  
+    input[type="checkbox"]:checked + span {
+        background-color:#5c5c5c;
+        color:#F7F7F7;
+    }
+
+    /*gumba mal potemnit*/
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/

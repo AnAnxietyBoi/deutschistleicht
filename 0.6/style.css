@@ -1,0 +1,222 @@
+body {
+    background-color: rgb(173, 254, 177);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    font-size: 20px;
+}
+
+.naSredini {
+    text-align: center;
+}
+
+.tabela {
+    font-size: 20px;
+    width:100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    /*padding: 20px;*/
+}
+
+.skrito {
+    display: none;
+}
+
+.prikazano {
+    display: block;
+}
+
+#gumb {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 177, 60);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  #gumb:hover {background-color: #9c5e00}
+  
+  #gumb:active {
+    background-color: #9c5e00;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.verzija {
+    color: #a5a5a5;
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+}
+
+.naslov {
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(255, 123, 0);
+    border-radius: 25px;
+    /*border-width: 1px;*/
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #ffe9c9;
+}
+
+#pomoc {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+    #pomoc:hover {
+        color: #7a7a7a;
+    }
+
+    #pomoc span {
+        display: none;
+        background-color: yellow;
+        padding: 20px;
+        position: absolute;
+        height: 450px;
+        width: 600px;
+        right: 0;
+        z-index: 2;
+    }
+
+    #pomoc:hover span {
+        display: block;
+    }
+
+/*oblacek*/
+/*span {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 5px solid #DFDFDF;
+    color: #717171;
+    font-size: 13px;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    top: -80px;
+    left:-30px;
+    display:none;
+    padding:0 20px;
+
+}
+span:after {
+    content:'';
+    position:absolute;
+    bottom:-10px;
+    width:10px;
+    height:10px;
+    border-bottom:5px solid #dfdfdf;
+    border-right:5px solid #dfdfdf;
+    background:#f8f8f8;
+    left:50%;
+    margin-left:-5px;
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+#pomoc {
+    margin:100px;
+    float:left;
+    position:relative;
+    cursor:pointer;
+}
+
+#pomoc:hover span{
+    display:block;
+}*/
+
+/*padding je rezerviran plac v elementu, v mejah, margin pa rezerviran plac okoli elementa, izven meja*/
+.input {
+    border: 3px solid rgb(255, 145, 0);
+    border-radius: 4px;
+    outline: none;
+    background-color: rgb(255, 237, 209);
+    width: 40%;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.nasloviStolpcev {
+    font-size: 25px;
+    color: #ac4d00;
+}
+
+button {
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 177, 60);
+}
+    button:hover {background-color: #9c5e00}
+
+.pravilno {
+    font-size: 25px;
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.narobe {
+    font-size: 25px;
+    color: red;
+    font-weight: bold;
+}
+
+.procenti {
+    font-weight: bold;
+    background: #dadada;
+    border: 3px solid #6b6b6b;
+    border-radius: 5px;
+    display: inline;
+    padding: 5px;
+}
+
+#vsiProcenti div {
+    display: inline;
+    font-weight: bold;
+}
+
+.vsiGumbi {
+    background-color:#EFEFEF;
+    border-radius: 4px;
+    /*border: 1px solid #D0D0D0;*/
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vsiGumbi label span {
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 0px;
+    display: block;
+    z-index: 1;
+    /*opacity: 0.6;*/
+  }
+
+  .vsiGumbi label input[type="radio"] {
+    position:absolute;
+    visibility: hidden;
+  }
+  
+    input[type="radio"]:checked + span {
+        background-color:#404040;
+        color:#F7F7F7;
+    }
+
+.prozorno span{
+    opacity: 0.6;
+}
+

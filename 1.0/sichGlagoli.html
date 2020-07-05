@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sl-SI">
+<head>
+	<link rel="apple-touch-icon" sizes="57x57" href="Favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="Favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="Favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="Favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="Favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="Favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="Favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="Favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+	<link rel="manifest" href="Favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="Favicon/ms-icon-144x144.png">
+
+	<meta name="theme-color" content="#ffbb47">	
+
+	<meta charset="UTF-8">
+	<meta name="keywords" content="Nemščina, nepravilni glagoli, nemški nepravilni glagoli vaje, vaja, primeri, sich glagoli, Povratni glagoli, Reflexive verben, Akkusativ, Dativ, deutschistleicht">
+	<meta name="description" content="Brezplačno orodje za učenje in vajo nemških nepravilnih glagolov in nemških povratnih glagolov.">
+	<meta name="author" content="Luka Pantar">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	
+	<!--<link rel="apple-touch-icon" href="/static/images/identity/HTML5_Badge_64.png">
+	<link rel="apple-touch-icon-precomposed" href="/static/images/identity/HTML5_Badge_64.png">-->
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" media="only screen and (max-width: 768px)" href="./mobile.css">
+
+	<script type="application/javascript" src="VsiGlagoli.js" defer></script>
+	<script type="application/javascript" src="javaScriptSichGlagoli.js" defer></script>
+	
+	<title>Povratni Glagoli</title>
+</head>
+<body onload="onLoad()">
+
+<!--  -->
+
+<noscript><strong><h1>Za pravilno delovanje strani vključi Javascript!</h1></strong></noscript>
+
+<ul>
+	<li><a href="index.html">Nemški Nepravilni Glagoli</a></li>
+	<li class="active"><a href="sichGlagoli.html">Povratni Glagoli</a></li>
+	<li><a href="iskanje.html">Iskanje</a></li>
+	<li><a href="kajSeMorasSeNauciti.html">Kaj se moraš še naučiti</a></li>
+	<li id="reset"><button onclick="reset()">Ponastavi</li>
+	<li id="pomoc">Pomoč?<span>
+		<strong>Nasveti:</strong><br>
+		- če želiš glagol vpisati, klikni VPIŠI GLAGOLSKO OBLIKO<br>
+		- če želiš imeti glagol podan, klikni POKAŽI GLAGOLSKO OBLIKO<br>
+		- če želiš preskočiti stolpec, klikni PRESKOČI<br>
+		- če si želiš vaditi glagole v 4.sklonu označi AKKUSATIV, za 3.sklon označi DATIV<br>
+		- za hiter preimik med vpisnimi okni uporabi CTRL<br>
+		- namesto gumba preveri/nadaljuj lahko uporabiš ENTER<br>
+		- pod stolpci se izpišejo procenti glogolov, ki si jih pravilno vpisal/a<br>
+		- če želiš procente in napačno vpisane glagole za današnji dan izbrisati, pritisni gumb PONASTAVI<br>
+		<br>
+		<strong>Nemške črke: </strong><br>
+		ä = Alt + a <br>
+		ö = Alt + o <br>
+		ü = Alt + u <br>
+		ß = Alt + s <br>
+		</span></li>
+</ul>
+
+<div class="naSredini"> <!-- vse je na sredini -->
+
+<h1 class="naslov">Reflexive Verben</h1>
+
+<table id="tabela", class="tabela sich">
+
+	<tr> <!-- vsi gumbi -->
+	<td>
+		<div class="vsiGumbi">
+			<label><input type="radio" name="sloPrevod" id="preskoci0" checked><span>Preskoči</span></label>
+			<label><input type="radio" name="sloPrevod" id="pokaziGlagolskoObliko0"><span>Pokaži Glagolsko Obliko</span></label>
+			<label><input type="radio" name="sloPrevod" id="vpisiGlagolskoObliko0"><span>Vpiši Glagolsko Obliko</span></label>
+
+			<label class="checkbox"><input type="checkbox" name="Akkusativ" id="Akkusativ" checked><span>Akkusativ</span></label>
+		</div>
+	</td>
+	<td>
+		<div class="vsiGumbi">
+			<label><input type="radio" name="reflexiveVerben" id="preskoci1" checked><span>Preskoči</span></label>
+			<label><input type="radio" name="reflexiveVerben" id="pokaziGlagolskoObliko1"><span>Pokaži Glagolsko Obliko</span></label>
+			<label><input type="radio" name="reflexiveVerben" id="vpisiGlagolskoObliko1"><span>Vpiši Glagolsko Obliko</span></label>
+
+			<label class="checkbox"><input type="checkbox" name="Dativ" id="Dativ" checked><span>Dativ</span></label>
+		</div>
+	</td>
+	</tr>
+
+	<tr class="nasloviStolpcev"> <!-- vsi naslovi -->
+	<th>Slovenski Prevod</th>
+	<th>Reflexive Verben</th> 
+	</tr>
+
+	<tr> <!-- pravilnost -->
+	<td id="pravilnost0"></td>
+	<td id="pravilnost1"></td>
+	</tr>
+
+	<tr> <!-- celice -->
+	<td id="sloPrevod"></td>
+	<td id="reflexiveVerben"></td> 
+	</tr>
+
+	<tr> <!-- procenti -->
+	<td><div id="procenti0"></div></td>
+	<td><div id="procenti1"></div></td>
+	</tr>
+	
+</table>
+
+<button type="button" id="gumb" onclick="preveri()">Preveri</button>
+
+<p></p>
+
+</div>
+
+<p class="verzija">
+	v1.0 9.12.2018<br>
+	Naredil: LUKA PANTAR
+</p>
+
+</body>
+</html>

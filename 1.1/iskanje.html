@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sl-SI">
+<head>
+	<link rel="apple-touch-icon" sizes="57x57" href="Favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="Favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="Favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="Favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="Favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="Favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="Favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="Favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+	<link rel="manifest" href="Favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="Favicon/ms-icon-144x144.png">
+
+	<meta name="theme-color" content="#ffbb47">
+
+	<meta charset="UTF-8">
+	<meta name="keywords" content="Nemščina, nepravilni glagoli, nepravilni glagoli tabela, nemški nepravilni glagoli vaje, iskanje, vaja, primeri, nemški nepravilni glagoli, sich glagoli, povratni glagoli, Reflexive verben, Akkusativ, Dativ, deutschistleicht">
+	<meta name="description" content="Brezplačno orodje za učenje in vajo nemških nepravilnih glagolov in nemških povratnih glagolov.">
+	<meta name="author" content="Luka Pantar">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<!--<link rel="apple-touch-icon" href="/static/images/identity/HTML5_Badge_64.png">
+	<link rel="apple-touch-icon-precomposed" href="/static/images/identity/HTML5_Badge_64.png">-->
+	<link href="style.css" media="all" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" media="only screen and (max-width: 768px)" href="./mobile.css">
+
+	<script type="application/javascript" src="VsiGlagoli.js" defer></script>
+	<script type="application/javascript" src="javaScriptIskanje.js" defer></script>
+
+	<title>Iskanje</title>
+</head>
+<body onload="onLoad()">
+
+<!--  -->
+
+<noscript><strong><h1>Za pravilno delovanje strani vključi Javascript!</h1></strong></noscript>
+
+<ul>
+	<li><a href="index.html">Nemški Nepravilni Glagoli</a></li>
+	<li><a href="sichGlagoli.html">Povratni Glagoli</a></li>
+	<li class="active"><a href="iskanje.html">Iskanje</a></li>
+	<li><a href="kajSeMorasSeNauciti.html">Kaj se moraš še naučiti</a></li>
+	<li><a href="statistika.html">Statistika</a></li>
+	<!--<li id="reset"><button onclick="reset()">Ponastavi</li>-->
+	<li id="pomoc">Pomoč?<span>
+		<strong>Nasveti:</strong><br>
+		- v vpisno okno vnesi glagol, ki ga iščeš in prikazale se bodo vse oblike iskanega glagola<br>
+		- namesto gumba išči lahko uporabiš ENTER<br>
+		<br>
+		<strong>Nemške črke: </strong><br>
+		ä = Alt + a <br>
+		ö = Alt + o <br>
+		ü = Alt + u <br>
+		ß = Alt + s <br>
+		</span></li>
+</ul>
+
+<div class="naSredini"> <!-- vse je na sredini -->
+
+<h1 class="naslov">Iskanje</h1>
+
+<p><button id="gumb0" onclick="gumbi(0)">Habe</button>
+	<button id="gumb1" onclick="gumbi(1)">Bin</button>
+	<button id="gumb2" onclick="gumbi(2)">Sich</button>
+	<input class="input" id="iskaniGlagol">
+</p>
+
+<button type="button" id="gumb" onclick="iskanje()">Išči</button>
+
+<table id="tabela0", class="tabela iskanje"></table>
+<table id="tabela1", class="tabela iskanje"></table>
+<table id="tabela2", class="tabela iskanje"></table>
+
+</div>
+
+<div> <!-- zgodovina iskanja-->
+	<p id="zgodovinaIskanja"></p>
+</div>
+
+<p class="verzija">
+	v1.1 6.1.2019<br>
+	Naredil: LUKA PANTAR
+</p>
+
+</body>
+</html>

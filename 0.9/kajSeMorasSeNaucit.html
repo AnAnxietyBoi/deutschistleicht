@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sl-SI">
+<head>
+	<link rel="apple-touch-icon" sizes="57x57" href="Favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="Favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="Favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="Favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="Favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="Favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="Favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="Favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+	<link rel="manifest" href="Favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="Favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Brezplačno orodje za učenje in vajo nemških nepravilnih glagolov in nemških povratnih glagolov.">
+	<meta name="author" content="Luka Pantar">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+	<!--<link rel="apple-touch-icon" href="/static/images/identity/HTML5_Badge_64.png">
+	<link rel="apple-touch-icon-precomposed" href="/static/images/identity/HTML5_Badge_64.png">-->
+	<link href="style.css" media="all" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" media="only screen and (max-width: 768px)" href="./mobile.css">
+
+	<title>Kaj se moraš še naučit</title>
+</head>
+<body onload="onLoad()">
+
+<!--  -->
+
+<noscript><strong><h1>Za pravilno delovanje strani vključi Javascript!</h1></strong></noscript>
+
+<ul>
+	<li><a href="index.html">Nemški Nepravilni Glagoli</a></li>
+	<li><a href="sichGlagoli.html">Povratni Glagoli</a></li>
+	<li><a href="iskanje.html">Iskanje</a></li>
+	<li class="active"><a href="kajSeMorasSeNaucit.html">Kaj se moraš še naučit</a></li>
+	<li id="reset"><button onclick="reset()">Ponastavi</li>
+	<li id="pomoc">Pomoč?<span>
+		<strong>Nasveti:</strong><br>
+		- Tukaj so podani glagoli, katere si narobe vpisal<br>
+		- Razvrščeni so po datumih<br>
+</ul>
+
+<div class="naSredini"><h1 class="naslov">Kaj se moraš se naučit</h1></div>
+
+<div id="vsiNapacniGlagoli"></div>
+
+<p class="verzija">
+	v0.9 9.11.2018<br>
+	Naredil: LUKA PANTAR
+</p>
+
+<script type="application/javascript" src="javaScriptKajSeMorasSeNaucit.js" async></script>
+
+</body>
+</html>
