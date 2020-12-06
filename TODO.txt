@@ -1,0 +1,36 @@
+﻿NAREJENO:////////////////////////////////////////////////////////
+dodaj pri 1.0 in 1.1 za iskanje google
+- velikost pomoči je glede na količino besedila
+- statistika na mobile
+- slika za spremenit orientacijo za statistiko
+- če se klikne na eden glagol izmed top 10 najpogostejših napak te redirecta na iskanje
+- urejene pomoči
+- št pravilnih glagolov odstranjeni
+- dodano za indexiranje na bingu
+- stisnjena slika
+
+TO DO://////////////////////////////////////////////////////////
+POMEMBNO:
+top 10 najpogostejših napak še za vsako skupino in stolpec
+globalno štetje
+mogoc datum na grafu pa ce kliknes na njih te vrže na kajsemorassenaučiti pa k kliknjenemu datumu
+mogoc je fill -1 da ti pokaže koliko do 100% pravilno
+- možnost spremembe seznama glagolov
+- private key pri ssh serverju
+- pri skupnem sestavku izpisu na sredini
+- pri statistiki pozicija gumba
+- na začetku se pojavi okence
+- service workers
+- vejice pri kajsemorassenauciti
+- v chroniu se ne pokaže ozadje pri vsiprocenti
+
+***************************************************************
+MORDA:
+- eastereggi oz nagrade
+- mobile v portrait mode
+- ko se ponavljajo glagoli v kajsemorassenauciti
+- najbolj iskani glagoli lestvica
+- view count
+- zgodovina iskanja
+- če je local storage poln
+- animacije
